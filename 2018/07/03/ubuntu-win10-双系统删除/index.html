@@ -151,6 +151,8 @@
 <p>然后用制作windows 10的U盘启动盘。 用windows自带的磁盘管理把ubuntu的分区都给删除掉。</p>
 <p>如果就这样做，一般情况是可以奏效了，但是ubuntu在双系统安装时，似乎把windows boot manager给重写到grub64.efi了，所以单纯的使用easyuefi，还是会无法停用grub引导。<br>每次开机都是grub引导就会很尴尬，无法开机到windows，所以我们就需要重写做windows引导。</p>
 <p>这里就需要使用windows的原版镜像，重启后用U盘启动，然后在安装界面时选择<code>修复计算机</code><br>,选择高级选项后命令行模式，输入以下指令：</p>
+<pre><code>bcdboot C:\Windows (如果C盘是系统盘的话)
+</code></pre><p>这样windows就会自动重写，然后重启你就会看见熟悉的windows启动了    </p>
 
   </section>
 
